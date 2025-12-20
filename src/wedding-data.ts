@@ -1,0 +1,95 @@
+export const weddingData = {
+  groom: {
+    fullName: "Leo Alexander",
+    nickname: "Ciputra",
+    bio: "Seorang arsitek yang menemukan keindahan dalam struktur, namun menemukan kesempurnaan dalam dirimu.",
+    // Rasio Portrait 2:3
+    image: "https://picsum.photos/800/1200?random=groom",
+    parents: "Putra dari Bpk. Alexander & Ibu Diana"
+  },
+  bride: {
+    fullName: "Kaia Amara",
+    nickname: "Azizah",
+    bio: "Pelukis mimpi yang akhirnya menemukan warna terindahnya di dalam hatimu.",
+    // Rasio Portrait 2:3
+    image: "https://picsum.photos/800/1200?random=bride",
+    parents: "Putri dari Bpk. Amara & Ibu Sofia"
+  },
+  event: {
+    date: "2026-07-14",
+    time: "17:00:00",
+    displayTime: "05:00 PM",
+    displayDate: "July 14, 2026",
+    location: "Kyoto, Japan",
+    venue: "Hyatt Regency Kyoto",
+    countdownTarget: "2026-07-14T17:00:00",
+    // Gambar Landscape Besar (Wallpaper)
+    splashImage: "https://picsum.photos/1920/1080?random=splash",
+    stardustPattern: "https://www.transparenttextures.com/patterns/stardust.png",
+    heroVideo: "https://res.cloudinary.com/dyk3nghtf/video/upload/q_auto:best,f_auto,vc_auto/v1765995639/June_and_July_-_The_Pre_Wedding_fiaaix.mp4",
+    quote: {
+      text: "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy.",
+      source: "Ar-Rum 30:21"
+    }
+  },
+  schedule: [
+    {
+      title: "Akad Nikah",
+      date: "14th July 2026",
+      time: "08:00 AM - 10:00 AM",
+      venue: "Hyatt Regency Kyoto Garden",
+      dressCode: "Pakaian Adat / Tradisional",
+      // Gambar Landscape
+      image: "https://picsum.photos/800/600?random=akad"
+    },
+    {
+      title: "The Reception",
+      date: "14th July 2026",
+      time: "05:00 PM - Late",
+      venue: "Hyatt Regency Kyoto Ballroom",
+      dressCode: "Black Tie Optional",
+      // Gambar Landscape
+      image: "https://picsum.photos/800/600?random=reception"
+    }
+  ],
+  story: {
+    videoUrl: "https://www.youtube.com/embed/OOIA6VcA4T0",
+    quote: "We loved with a love that was more than love.",
+    quoteAuthor: "Edgar Allan Poe",
+    established: "2023",
+    items: [
+      {
+        title: "Pertemuan Pertama",
+        description: "Semua dimulai dengan pertemuan tidak sengaja di sebuah kedai kopi di Kyoto saat hujan deras turun."
+      },
+      {
+        title: "Lamaran",
+        description: "Tiga tahun kemudian, di bawah pohon sakura Maruyama Park, janji itu pun terucap."
+      }
+    ]
+  },
+  gallery: [
+    // Random ID berbeda agar gambar bervariasi
+      { src: 'https://picsum.photos/600/900?random=1', spanClass: 'col-span-1 row-span-2 md:col-span-1 md:row-span-2' },
+      { src: 'https://picsum.photos/900/600?random=2', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
+      { src: 'https://picsum.photos/600/900?random=3', spanClass: 'col-span-1 row-span-2 md:col-span-1 md:row-span-2' },
+      { src: 'https://picsum.photos/600/600?random=4', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
+      { src: 'https://picsum.photos/600/600?random=5', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
+      { src: 'https://picsum.photos/600/600?random=6', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
+      { src: 'https://picsum.photos/900/600?random=7', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
+      { src: 'https://picsum.photos/600/600?random=8', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
+      { src: 'https://picsum.photos/900/500?random=9', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
+      { src: 'https://picsum.photos/900/500?random=10', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
+  ],
+  gifts: {
+    accounts: [
+      { bank: "BCA", number: "123 456 7890", owner: "Leo Alexander" },
+      { bank: "MANDIRI", number: "098 765 4321", owner: "Kaia Amara" }
+    ],
+    address: "Jalan Bunga Sakura No. 88, Cluster Kyoto, Jakarta Selatan, DKI Jakarta 12345"
+  },
+  footer: {
+    thankYouMessage: "Kehadiran dan doa restu Anda adalah kado terindah bagi kami. Sampai jumpa di hari bahagia kami.",
+    closingGreeting: "Wassalamu’alaikum warahmatullahi wabarakatuh"
+  }
+};
