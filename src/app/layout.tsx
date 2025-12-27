@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // Import font langsung dari Google via Next.js optimization
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Lato, Great_Vibes, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
 // Konfigurasi Font Serif (Playfair Display)
@@ -18,6 +18,22 @@ const lato = Lato({
   display: "swap",
 });
 
+// Konfigurasi Font Script (Great Vibes) - Fancy cursive font
+const greatVibes = Great_Vibes({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-script",
+  display: "swap",
+});
+
+// Konfigurasi Font Elegant Serif (Cormorant Garamond)
+const cormorant = Cormorant_Garamond({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Leo & Kaia | The Wedding",
   description: "Undangan Pernikahan Leo Alexander & Kaia Amara",
@@ -32,9 +48,9 @@ export default function RootLayout({
     // Masukkan variable font ke tag html agar bisa diakses global
     <html
       lang="en"
-      className={`scroll-smooth ${playfair.variable} ${lato.variable}`}
+      className={`scroll-smooth ${playfair.variable} ${lato.variable} ${greatVibes.variable} ${cormorant.variable}`}
     >
-      <body className="bg-romantic-50 text-stone-800 font-sans selection:bg-romantic-200 antialiased overflow-x-hidden">
+      <body className="bg-rose-50 text-stone-800 font-sans   antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

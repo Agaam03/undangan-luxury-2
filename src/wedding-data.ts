@@ -53,7 +53,7 @@ export const weddingData = {
     }
   ],
   story: {
-    videoUrl: "https://www.youtube.com/embed/OOIA6VcA4T0",
+    videoUrl: "https://res.cloudinary.com/dyk3nghtf/video/upload/q_auto:best,f_auto,vc_auto/v1765995639/June_and_July_-_The_Pre_Wedding_fiaaix.mp4",
     quote: "We loved with a love that was more than love.",
     quoteAuthor: "Edgar Allan Poe",
     established: "2023",
@@ -69,17 +69,24 @@ export const weddingData = {
     ]
   },
   gallery: [
-    // Random ID berbeda agar gambar bervariasi
-      { src: 'https://picsum.photos/600/900?random=1', spanClass: 'col-span-1 row-span-2 md:col-span-1 md:row-span-2' },
-      { src: 'https://picsum.photos/900/600?random=2', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
-      { src: 'https://picsum.photos/600/900?random=3', spanClass: 'col-span-1 row-span-2 md:col-span-1 md:row-span-2' },
-      { src: 'https://picsum.photos/600/600?random=4', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
-      { src: 'https://picsum.photos/600/600?random=5', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
-      { src: 'https://picsum.photos/600/600?random=6', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
-      { src: 'https://picsum.photos/900/600?random=7', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
-      { src: 'https://picsum.photos/600/600?random=8', spanClass: 'col-span-1 row-span-1 md:col-span-1 md:row-span-1' },
-      { src: 'https://picsum.photos/900/500?random=9', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
-      { src: 'https://picsum.photos/900/500?random=10', spanClass: 'col-span-2 row-span-1 md:col-span-2 md:row-span-1' },
+    // Block 1 (5 images)
+    { src: 'https://picsum.photos/600/900?random=1' },  // Row1: Portrait left
+    { src: 'https://picsum.photos/900/600?random=2' },  // Row1: Landscape right
+    { src: 'https://picsum.photos/600/900?random=3' },  // Row2: Portrait left
+    { src: 'https://picsum.photos/600/900?random=4' },  // Row2: Portrait right
+    { src: 'https://picsum.photos/900/500?random=5' },  // Row3: Full landscape
+    // Block 2 (5 images)
+    { src: 'https://picsum.photos/600/900?random=6' },
+    { src: 'https://picsum.photos/900/600?random=7' },
+    { src: 'https://picsum.photos/600/900?random=8' },
+    { src: 'https://picsum.photos/600/900?random=9' },
+    { src: 'https://picsum.photos/900/500?random=10' },
+    // Block 3 (5 images)
+    { src: 'https://picsum.photos/600/900?random=11' },
+    { src: 'https://picsum.photos/900/600?random=12' },
+    { src: 'https://picsum.photos/600/900?random=13' },
+    { src: 'https://picsum.photos/600/900?random=14' },
+    { src: 'https://picsum.photos/900/500?random=15' },
   ],
   gifts: {
     accounts: [
@@ -91,5 +98,9 @@ export const weddingData = {
   footer: {
     thankYouMessage: "Kehadiran dan doa restu Anda adalah kado terindah bagi kami. Sampai jumpa di hari bahagia kami.",
     closingGreeting: "Wassalamu’alaikum warahmatullahi wabarakatuh"
+  },
+  music: {
+    url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    autoPlay: true
   }
 };

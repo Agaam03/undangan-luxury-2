@@ -42,11 +42,11 @@ export const Navbar: React.FC = () => {
           maxWidth: "1000px",
           marginTop: "20px",
           borderRadius: "100px",
-          backgroundColor: "rgba(249, 248, 246, 0.85)",
+          backgroundColor: "rgba(255, 255, 255, 0.90)",
           backdropFilter: "blur(15px)",
           padding: "0.6rem 2rem",
-          border: "1px solid rgba(0, 0, 0, 0.08)",
-          boxShadow: "0 10px 40px -10px rgba(0, 0, 0, 0.1)",
+          border: "1px solid rgba(0, 0, 0, 0.05)",
+          boxShadow: "0 10px 40px -10px rgba(0, 0, 0, 0.08)",
           duration: 0.6,
           ease: "power4.out",
           overwrite: "auto",
@@ -69,7 +69,6 @@ export const Navbar: React.FC = () => {
   // GSAP Mobile Menu Animations
   useEffect(() => {
     if (isMobileMenuOpen) {
-      // Disable body scroll when menu is open
       document.body.style.overflow = "hidden";
 
       const tl = gsap.timeline();
@@ -135,12 +134,12 @@ export const Navbar: React.FC = () => {
       setTimeout(
         () => {
           window.scrollTo({
-            top: element.offsetTop - 80, // Offset for navbar
+            top: element.offsetTop - 80,
             behavior: "smooth",
           });
         },
         isMobileMenuOpen ? 700 : 0
-      ); // Delay if menu was closing
+      );
     }
   };
 
@@ -150,26 +149,28 @@ export const Navbar: React.FC = () => {
       <div className="fixed top-0 left-0 w-full z-50 flex justify-center pointer-events-none px-4">
         <nav
           ref={navRef}
-          className="pointer-events-auto text-pink-500 flex justify-between items-center w-full invisible"
+          className="pointer-events-auto text-stone-700 flex justify-between items-center w-full invisible"
         >
-          {/* Logo */}
-          <div className="text-xl md:text-2xl font-serif font-bold tracking-tight shrink-0">
+          {/* Logo - Script Font */}
+          <div className="shrink-0">
             <a href="#" className="hover:opacity-60 transition-opacity">
-              {initials}
+              <span className="font-script text-2xl md:text-3xl text-pink-500">
+                {initials}
+              </span>
             </a>
           </div>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8 font-sans text-[10px] tracking-[0.3em] uppercase font-bold">
+          {/* Desktop Links - Elegant Font */}
+          <div className="hidden md:flex items-center gap-8 font-elegant text-[11px] tracking-[0.25em] uppercase">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="hover:text-stone-400 transition-colors relative group"
+                className="text-stone-600 hover:text-pink-500 transition-colors relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-900 transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-pink-400 transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -179,7 +180,7 @@ export const Navbar: React.FC = () => {
             className="md:hidden p-2 text-pink-500"
             onClick={() => setIsMobileMenuOpen(true)}
           >
-            <Menu size={24} />
+            <Menu size={22} />
           </button>
         </nav>
       </div>
@@ -188,45 +189,50 @@ export const Navbar: React.FC = () => {
       {isMobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="fixed inset-0 z-[100] bg-stone-50 flex flex-col items-center justify-center md:hidden"
+          className="fixed inset-0 z-[100] bg-gradient-to-b from-white to-romantic-50 flex flex-col items-center justify-center md:hidden"
         >
+          {/* Subtle pattern overlay */}
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }} />
+
           {/* Close Button */}
           <button
             onClick={closeMenu}
-            className="absolute top-8 right-8 p-3 bg-white rounded-full text-stone-900 border border-stone-100 shadow-sm"
+            className="absolute top-8 right-8 p-3 bg-white rounded-full text-stone-600 border border-stone-100 shadow-sm hover:text-pink-500 transition-colors"
           >
-            <X size={24} />
+            <X size={22} />
           </button>
 
-          {/* Brand */}
-          <div className="absolute top-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-            <span className="text-xs uppercase tracking-[0.5em] text-stone-400 font-bold mb-2">
+          {/* Brand Header */}
+          <div className="absolute top-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+            <span className="text-[9px] uppercase tracking-[0.5em] text-romantic-400 font-medium mb-2">
               The Wedding of
             </span>
-            <span className="text-[26px] md:text-3xl font-serif font-bold text-pink-500">
+            <span className="font-script text-3xl text-pink-500">
               {fullNames}
             </span>
           </div>
 
           {/* Links Container */}
-          <div className="flex flex-col gap-6 items-center text-center w-full px-12">
+          <div className="flex flex-col gap-5 items-center text-center w-full px-12">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="mobile-link text-3xl font-serif italic text-pink-500 hover:text-stone-400 transition-colors py-2"
+                className="mobile-link font-script text-4xl text-pink-500 hover:text-romantic-400 transition-colors py-1"
               >
                 {item.name}
               </a>
             ))}
 
-            <div className="mobile-link w-full max-w-[200px] h-px bg-stone-200 my-4"></div>
+            <div className="mobile-link w-24 h-px bg-gradient-to-r from-transparent via-romantic-300 to-transparent my-4" />
 
             <a
               href="#ucapan-rsvp"
               onClick={(e) => scrollToSection(e, "#ucapan-rsvp")}
-              className="mobile-link flex items-center gap-3 px-10 py-4 bg-pink-500 text-stone-50 font-sans text-[10px] uppercase tracking-[0.3em] font-bold rounded-full shadow-xl hover:bg-stone-800 transition-all"
+              className="mobile-link flex items-center gap-3 px-8 py-3 bg-stone-900 text-white font-elegant text-xs uppercase tracking-[0.25em] rounded-full shadow-lg hover:bg-stone-800 transition-all"
             >
               <Calendar size={14} />
               Confirm RSVP
@@ -234,10 +240,14 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Decorative Footer */}
-          <div className="absolute bottom-12 flex flex-col items-center gap-2">
-            <div className="h-12 w-px bg-stone-200"></div>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-pink-500 font-bold">
-              {weddingData.event.displayDate}, {weddingData.event.location}
+          <div className="absolute bottom-12 flex flex-col items-center gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-px bg-romantic-200" />
+              <span className="text-romantic-300 text-sm">❧</span>
+              <div className="w-8 h-px bg-romantic-200" />
+            </div>
+            <span className="font-elegant text-xs tracking-[0.2em] text-stone-500">
+              {weddingData.event.displayDate} • {weddingData.event.location}
             </span>
           </div>
         </div>

@@ -5,6 +5,8 @@
   /* Di v4, key 'font-*' otomatis menjadi utility font-* */
   --font-serif: var(--font-playfair), serif;
   --font-sans: var(--font-lato), sans-serif;
+  --font-script: var(--font-script), cursive;
+  --font-elegant: var(--font-cormorant), serif;
 
   /* 2. Konfigurasi Warna Custom 'Romantic' */
   /* Di v4, key 'color-*' otomatis menjadi utility bg-*, text-*, border-*, dll */
